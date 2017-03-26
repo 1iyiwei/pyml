@@ -79,7 +79,7 @@ Then run these commands:
     theano.test()
 -->
 
-## Install Keras
+## [Install Keras](https://keras.io/)
 
 The default Keras backend seems to be TensorFlow.
 See [here](https://keras.io/backend/) about switching to Theano.
