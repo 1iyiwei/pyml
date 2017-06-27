@@ -1,4 +1,4 @@
-## Installation ##
+# Installation #
 
 ## Theano ##
 
@@ -6,10 +6,10 @@ Li-Yi Wei, 2017
 
 Installking Keras ought to install Theano automatically for you.
 
-If not, with anaconda installed, you can just follow the instructions from [here](http://deeplearning.net/software/theano/install_windows.html)
+If not, with anaconda installed, you can just follow the instructions from [here](http://deeplearning.net/software/theano/install_windows.html).
 
     $ conda install mingw libpython
-
+    
 <!--
 ## Install Theano with g++ under 64-bit Windows
 
@@ -75,20 +75,22 @@ In case you don't want the default BLAS with Theano (due to various reasons such
 
 Below is a summary from [here](http://ankivil.com/making-theano-faster-with-cudnn-and-cnmem-on-windows-10/) for Windows:
 
-* Download [mingw64_dll.zip](http://sourceforge.net/projects/openblas/files/v0.2.14/mingw64_dll.zip/download)
+* Download [mingw64_dll.zip](http://sourceforge.net/projects/openblas/files/v0.2.14/mingw64_dll.zip/download).
 
-* Download [OpenBLAS-v0.2.14-Win64-int32.zip](http://sourceforge.net/projects/openblas/files/v0.2.14/OpenBLAS-v0.2.14-Win64-int32.zip/download)
+* Download [OpenBLAS-v0.2.14-Win64-int32.zip](http://sourceforge.net/projects/openblas/files/v0.2.14/OpenBLAS-v0.2.14-Win64-int32.zip/download).
 
-* Create a directory to put OpenBLAS, 'C:\openblas' for instance
+* Create a directory to put OpenBLAS, `C:\openblas` for instance.
 
-* Copy the DLLs from 'mingw64_dll' and 'OpenBlas/bin' into C:\openblas
+* Copy the DLLs from `mingw64_dll` and `OpenBlas/bin` into `C:\openblas`.
 
-* Add to following lines to your .theanorc file:
-
+* Add to following lines to your `.theanorc` file:
+```
     [blas]
     ldflags = -LC:\openblas -lopenblas
-     
-* Add 'C:\OpenBlas' to the 'PATH' environment variable
+``` 
 
-* Run [check_blas.py](check_blas.py) for verification
+* Add `C:\OpenBlas` to the `PATH` environment variable.
 
+* Run [check_blas.py](check_blas.py) for verification.
+
+If there is a more principled way to do this (e.g., via conda or pip install), please let me know.
